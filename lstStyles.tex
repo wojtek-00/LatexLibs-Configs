@@ -13,3 +13,28 @@
 	keywordstyle=\color{blue},
 	commentstyle=\color{gray}
 }
+
+
+
+\definecolor{LightBlue}{rgb}{0.678,0.847,0.902}
+\definecolor{Orange}{rgb}{1.0,0.647,0.0}
+
+
+% / -> start kolor dla metod
+% | -> stop kolor dla metod
+% * -> start kolor dla typów
+% + -> stop kolor dla typów
+\lstdefinestyle{methodhighlight}{
+	basicstyle=\ttfamily,
+	language=C++,
+	keywordstyle=\color{LightBlue}\bfseries,   % klasy
+	identifierstyle=\color{black},
+	moredelim=**[is][\color{Orange}]{/}{|},
+	moredelim=**[is][keywordstyle]{*}{+}
+}
+
+
+% \imethod{*sensors+./getHighAlarmTemp|(*amm+, addr)}
+\newcommand{\imethod}[1]{
+	\lstinline[style=methodhighlight]!#1!%
+}
