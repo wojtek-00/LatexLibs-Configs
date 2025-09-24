@@ -2,65 +2,10 @@
 \documentclass[11pt,a4paper,open=any]{scrbook} % KOMA-Script article class
 \usepackage[a4paper,margin=2cm]{geometry}
 
-% Pakiety podstawowe
-\usepackage[utf8]{inputenc} % kodowanie znaków
-\usepackage[T1]{fontenc}
-\usepackage[ngerman,english,polish]{babel} % języki
-\usepackage{lmodern} % lepsze fonty
-\usepackage{hyperref} % linki
-\usepackage{graphicx} % grafika
-\usepackage{amsmath, amssymb} % matematyka
-\usepackage{listings} % kod źródłowy
-\usepackage{xcolor}   % kolory
-\usepackage{tcolorbox} % kolorowe ramki
-\usepackage{tikz} % rysunki
-\usepackage{enumitem} % lepsze listy
-\usepackage{minted}
+\include{../framework}
+\include{../tcbStyles}
+\include{../lstStyles}
 
-
-% Definicja środowiska dla przykładów
-\tcbset{
-        tutorial/.style={
-        colback=blue!5!white,
-        colframe=blue!75!black,
-        fonttitle=\bfseries,
-        title=Beispiel,
-    }
-}
-
-\tcbset{
-        red/.style={
-        colback=red!5!white,
-        colframe=red!75!black,
-        fonttitle=\bfseries,
-        title=Beispiel,
-    }
-}
-
-\tcbset{
-        blue/.style={
-        colback=blue!5!white,
-        colframe=blue!75!black,
-        fonttitle=\bfseries,
-        title=Beispiel,
-    }
-}
-
-% Ustawienia dla listings (kod źródłowy)
-\lstset{
-    language=[LaTeX]TeX,
-    basicstyle=\ttfamily\small,
-    backgroundcolor=\color{gray!10},
-    showspaces=false,
-    keepspaces=false,
-    frame=single,
-    breaklines=true,
-    captionpos=b,
-    numbers=none,
-    numberstyle=\tiny,
-    keywordstyle=\color{blue},
-    commentstyle=\color{gray}
-}
 
 % Dokument
 \begin{document}
@@ -89,14 +34,14 @@
 
 % ================================================
 \newpage
-\begin{tcolorbox}[tutorial,title={Hinweis}]
+\begin{tcolorbox}[red,title={Hinweis}]
 Alles, was in diesen Boxen steht, sind kurze Notizen oder Tipps für mich.
 \end{tcolorbox}
 
 \section{Textformatierung}
 Normale Schrift, \textbf{fett}, \textit{kursiv}, \underline{unterstrichen}.  
 
-\begin{tcolorbox}[tutorial,title={Beispiel}]
+\begin{tcolorbox}[red,title={Beispiel}]
 \begin{verbatim}
     Normale Schrift, \textbf{fett}, \textit{kursiv}, 
     \underline{unterstrichen}.
