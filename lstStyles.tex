@@ -24,7 +24,7 @@
 % | -> stop kolor dla metod
 % * -> start kolor dla typów
 % + -> stop kolor dla typów
-\lstdefinestyle{methodhighlight}{
+\lstdefinestyle{cppMethod}{
 	basicstyle=\ttfamily,
 	language=C++,
 	keywordstyle=\color{LightBlue}\bfseries,   % klasy
@@ -34,7 +34,7 @@
 }
 
 
-% \imethod{*sensors+./getHighAlarmTemp|(*amm+, addr)}
-\newcommand{\imethod}[1]{
-	\lstinline[style=methodhighlight]!#1!%
+% \cppMethod{*sensors+./getHighAlarmTemp|(*amm+, addr)}
+\newcommand{\cppMethod}[1]{
+	\lstinline[style=cppMethod]!#1!%
 }
